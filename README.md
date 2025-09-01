@@ -39,14 +39,14 @@ View analytics: number of lost, found, and returned items per month.
 
 Backend: Laravel  
 Frontend (Web): Laravel Blade  
-Frontend (Mobile): NativeScript + Vue.js
+Frontend (Mobile): React Native
 
 # Installation & Setup Prerequisites
 
 PHP 8+  
 Composer  
 Node.js & npm  
-NativeScript CLI  
+React Native  
 MySQL
 
 # Backend (Laravel) Setup:
