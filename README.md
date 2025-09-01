@@ -46,7 +46,7 @@ Frontend (Mobile): React Native
 PHP 8+  
 Composer  
 Node.js & npm  
-React Native 
+React Native  
 MySQL
 
 # Backend (Laravel) Setup:
