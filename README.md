@@ -82,6 +82,14 @@ No separate setup required, Laravel Blade runs within the backend.
 
 # Frontend (Mobile - React Native Expo)
 
-cd frontend  
-npm install  
+### Go inside the project folder
+
+cd frontend
+
+### Install dependencies
+
+npm install
+
+### start the development server
+
 npx expo start
