@@ -80,4 +80,8 @@ php artisan serve
 
 No separate setup required, Laravel Blade runs within the backend.
 
-# Frontend (Mobile - WE WILL USE REACT NATIVE STILL ON PROCESS)
+# Frontend (Mobile - React Native Expo)
+
+cd frontend  
+npm install  
+npx expo start
