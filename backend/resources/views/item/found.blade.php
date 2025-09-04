@@ -3,99 +3,67 @@
 @section('main-content')
 
 <title>View Recently Reported Lost and Found Items</title>
-<div class="text-center mb-4 mx-5">
-                        
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class=" text-center mb-4 mx-5">
-                        <label for="sub_category_id" class="control-label lbl-descriptive">What was Found
-                            <small class="required">*</small>
-                                <span class="label-detail">(Dog, Jacket, Smartphone, Wallet, etc.) This field is required.</span>
-                        </label>
-
-                        <input id="search_sub_cat" class="form-control search-item-input" placeholder="What was Found" name="sub_category_id" type="text" spellcheck="false" data-ms-editor="true">
-                        <div class="search-box"></div>
-                                            </div>
-
-                    <div class="text-center mb-4 mx-5 ">
-                        <label for="category_id" class="control-label lbl-descriptive">Category
-                            <small class="required">*</small>
-                            <span class="label-detail">(Animals/Pets, Clothing, Electronics, Personal Accessories etc.) This Field may Auto-Populate</span>
-                        </label>
-
-                        <input id="search_cat" class="form-control search-item-input" placeholder="Search Category" name="category_id" type="text" spellcheck="false" data-ms-editor="true">
-                        <div class="search-box"></div>
-                                            </div>
-
-                    <div class="text-center mb-4 mx-5 ">
-                        <label for="brand_id" class="control-label lbl-descriptive">
-                            <span class="brand_label">Brand</span>
-                            <span class="label-detail brand_desc_text">(Ralph Lauren, Samsung, KitchenAid, etc.)</span></label>
-
-                        <input id="search_brand" class="form-control search-item-input" placeholder="Search Brand" name="brand_id" type="text" spellcheck="false" data-ms-editor="true">
-                        <div class="search-box"></div>
-                                            </div>
-
-                    <div class="text-center mb-4 mx-5">
-                        <label for="primary_color" class="control-label lbl-descriptive">Primary Color
-                        <span class="label-detail">Please Add the Color That best represents the found property (Black, Red, Blue, etc.)</span>
-                        </label>
-                        <input id="primary_color" class="form-control search_color" placeholder="Search Primary Color" name="primary_color" type="text" spellcheck="false" data-ms-editor="true">
-                        <div class="search-box"></div>
-                    </div>
-
-                    <div class="text-center mb-4 mx-5">
-                        <label for="secondary_color" class="control-label lbl-descriptive">Secondary Item Color
-                            <span class="label-detail">Please add a color that acts as a less dominant (Leave blank if not applicable.)</span>
-                        </label>
-                        <input id="secondary_color" class="form-control search_color" placeholder="Search Secondary Color" name="secondary_color" type="text" spellcheck="false" data-ms-editor="true">
-                        <div class="search-box"></div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6">
-                    <div class="text-center mb-4 mx-5">
-                        <label for="date" class="control-label lbl-descriptive">Date Found
-                            <small class="required">*</small>
-                            <span class="label-detail">Please add the approximate date of when the item was found.</span>
-                        </label>
-                        <div class="input-group date">
-                            <input id="incident_date" class="form-control" placeholder="Date Found" name="incident_date" type="text" spellcheck="false" data-ms-editor="true">
-                            <span class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
-                            </span>
+<div class="col-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Submit Found Item</h4>
+        </div>
+        <div class="card-content">
+            <div class="card-body">
+                <form class="form">
+                    <div class="row">
+                        <div class="col-md-6 col-12">
+                            <div class="form-group">
+                                <label for="what-was-found-column">What was Found <span aria-hidden="true">*</span></label><br>
+                                <small id="found-helper">(Dog, Jacket, Smartphone, Wallet, etc.)</small>
+                                <small id="found-error" class="error" style="color: red; display: none;">This field is required</small>
+                                <input type="text" id="what-was-found-column" class="form-control" placeholder="What was Found" name="what-was-found-column" spellcheck="false" data-ms-editor="true" aria describedly="found-helper found-error">
+                            </div>
                         </div>
-                                            </div>
-                    <div class="text-center mb-4 mx-5">
-                        <label for="time" class="control-label lbl-descriptive">Time Found
-                            <small class="required">*</small>
-                            <span class="label-detail">Please add the approximate time of day that the was item found.</span>
-                        </label>
-                        <div class="input-group">
-                            <input id="time" class="form-control time" placeholder="Time Found" name="time" type="text" spellcheck="false" data-ms-editor="true">
-                            <span class="input-group-addon">
-                                <i class="fa fa-clock-o"></i>
-                            </span>
+                        <div class="col-md-6 col-12">
+                            <div class="form-group">
+                                <label for="category-column">Category <span aria-hidden="true">*</span></label><br>
+                                <small id="category-helper">(Animals/Pets, Clothing, Electronics, Personal Accessories etc.)</small>
+                                <small id="category-error" class="error" style="color: red; display: none;">This feild is required</small>
+                                <input type="text" id="category-column" class="form-control" placeholder="Category" name="category-column" spellcheck="false" data-ms-editor="true" aria describedly="category-helper category-error">
+                            </div>
                         </div>
-                                            </div>
-
-                    <div class="">
-                        <label class="control-label lbl-descriptive">Upload Image
-                        <span class="label-detail">(This image will display on the website.)<span>
-                        </span></span></label>
-                                                    <input placeholder="Upload an image or file of the item" class="form-control" id="upload_image_name" name="upload_image" type="hidden">
-                                                <input id="upload_media_image" name="upload_image_name" type="hidden">
-                                            </div>
-                    <!---Image Container-->
-                    <div id="upload-image-container" class="cropContainer"><div class="cropControls cropControlsUpload"> <i class="cropControlUpload"></i> </div><form class="upload-image-container_imgUploadForm" style="visibility: hidden;">  <input type="file" name="img" id="upload-image-container_imgUploadField">  </form></div>
-
-                    <div class="text-center mb-4 mx-5 ">
-                        <label for="additional_information" class="control-label lbl-descriptive">Additional Information
-                        <span class="label-detail">Please provide any additional details/description of your found property.</span>
-                        </label>
-                        <textarea id="additional_information" class="form-control" placeholder="Additional Information" rows="5" name="additional_information" cols="50" spellcheck="false" data-ms-editor="true"></textarea>
-                                            </div>
-                </div>
+                        <div class="col-md-6 col-12">
+                            <div class="form-group">
+                                <label for="brand-column">Brand <span aria-hidden="true">*</span></label><br>
+                                <small id="brand-helper">(Samsung, Adidas, GoPro, etc)</small>
+                                <small id="brand-error" class="error" style="color: red; display: none;">This field is required</small>
+                                <input type="text" id="brand-column" class="form-control" placeholder="Brand" name="brand-column" spellcheck="false" data-ms-editor="true" aria describedly="brand-helper brand-error">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="form-group">
+                                <label for="country-floating">Primary Color <span>*</span></label>
+                                <input type="text" id="country-floating" class="form-control" name="country-floating" placeholder="Country" spellcheck="false" data-ms-editor="true">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="form-group">
+                                <label for="company-column">Secondary Color <span>*</span></label>
+                                <input type="text" id="company-column" class="form-control" name="company-column" placeholder="Company" spellcheck="false" data-ms-editor="true">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="form-group">
+                                <label for="email-id-column">Email</label>
+                                <input type="email" id="email-id-column" class="form-control" name="email-id-column" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group col-12">
+                        </div>
+                        <div class="col-12 d-flex justify-content-end">
+                            <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
+                            <button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
+    </div>
+</div>
 @endsection

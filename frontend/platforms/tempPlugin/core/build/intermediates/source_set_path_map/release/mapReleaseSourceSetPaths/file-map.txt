@@ -1,0 +1,7 @@
+org.nativescript.core-pngs-0 C:\Users\PC\Herd\cloning\LFSS\frontend\platforms\tempPlugin\core\build\generated\res\pngs\release
+org.nativescript.core-resValues-1 C:\Users\PC\Herd\cloning\LFSS\frontend\platforms\tempPlugin\core\build\generated\res\resValues\release
+org.nativescript.core-mergeReleaseResources-2 C:\Users\PC\Herd\cloning\LFSS\frontend\platforms\tempPlugin\core\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
+org.nativescript.core-mergeReleaseResources-3 C:\Users\PC\Herd\cloning\LFSS\frontend\platforms\tempPlugin\core\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+org.nativescript.core-release-4 C:\Users\PC\Herd\cloning\LFSS\frontend\platforms\tempPlugin\core\build\intermediates\merged_res\release\mergeReleaseResources
+org.nativescript.core-main-5 C:\Users\PC\Herd\cloning\LFSS\frontend\platforms\tempPlugin\core\src\main\res
+org.nativescript.core-release-6 C:\Users\PC\Herd\cloning\LFSS\frontend\platforms\tempPlugin\core\src\release\res

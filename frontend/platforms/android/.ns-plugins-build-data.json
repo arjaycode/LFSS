@@ -1,0 +1,9 @@
+{
+	"@nativescript/core": {
+		"C:\\Users\\PC\\herd\\cloning\\lfss\\frontend\\node_modules\\@nativescript\\core\\platforms\\android\\res\\values\\ids.xml": "af407e752ae7884c6e064d1dc81008497d5ff0cc",
+		"C:\\Users\\PC\\herd\\cloning\\lfss\\frontend\\node_modules\\@nativescript\\core\\platforms\\android\\native-api-usage.json": "4a614afaa51061d74eba0cbe39100f47b0e2a10b",
+		"C:\\Users\\PC\\herd\\cloning\\lfss\\frontend\\node_modules\\@nativescript\\core\\platforms\\android\\winter_tc-release.aar": "501d4ad25f8d8d2cf425c1fa3aa8ffad583c1ff2",
+		"C:\\Users\\PC\\herd\\cloning\\lfss\\frontend\\node_modules\\@nativescript\\core\\platforms\\android\\core.aar": "2624f62d56d8aaaf8d3696aa31e129d64d31f26e",
+		"C:\\Users\\PC\\herd\\cloning\\lfss\\frontend\\node_modules\\@nativescript\\core\\platforms\\android\\widgets-release.aar": "188820e15babb6a443b6a0f0075caa2078d486f7"
+	}
+}

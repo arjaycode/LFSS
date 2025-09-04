@@ -18,7 +18,7 @@
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="lost">
+                <a class="nav-link" href="/recent">
                     <span>View Recent Posts</span></a>
             </li>
 
@@ -32,12 +32,12 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item active">
-                <a class="nav-link" href="/lost-property">
+                <a class="nav-link" href="/submit-lost-property">
                     <span>Submit Lost Item</span></a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="/found-property">
+                <a class="nav-link" href="/submit-found-property">
                     <span>Submit Found Item</span></a>
             </li>
 
