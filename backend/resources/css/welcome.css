@@ -189,6 +189,7 @@ body {
   font-size: 24 px;
   padding: 8px 25px;
   border-radius: 20px;
+  margin-top: 14px;
 }
 
 .login-btn:hover {
