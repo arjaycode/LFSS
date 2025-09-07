@@ -5,7 +5,11 @@ use Illuminate\Http\Request;
 use App\Models\items;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('user.login');
+});
+
+Route::get('/create/user/account', function () {
+    return view('user.create');
 });
 
 Route::get('/recent', function () {

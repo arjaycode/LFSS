@@ -107,7 +107,7 @@ body {
 
 .login-card {
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
   border-radius: 20px;
   padding: 15px;
   width: 350px;
@@ -115,6 +115,19 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: -80px;
+  left: -130px;
+  margin: 0;
+  font-size: 100px;
+  font-weight: 500;
+  color: #333333;
+  z-index: -1;
+  width: 1000px;
 }
 
 .profile-icon {
