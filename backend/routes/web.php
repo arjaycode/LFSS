@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use App\Models\items;
 
 Route::get('/', function () {
-    return view('item.home');
+    return view('welcome');
 });
 
 Route::get('/recent', function () {
