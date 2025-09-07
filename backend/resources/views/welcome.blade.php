@@ -14,9 +14,7 @@
       <img src="{{ asset('img/Logo.svg') }}" alt="" class="header-logo">
       <span class="logo-title">FINDERSKEEPERZ</span>
     </div>
-    <p class="header-text">
-      Don't have an account? <a href=" {{ url('/create/user/account') }}" class="header-link">Create new account.</a>
-    </p>
+    @yield('text')
   </header>
   <div class="container">
     <!-- Login Section -->

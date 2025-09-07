@@ -1,5 +1,11 @@
 @extends('welcome')
 
+@section('text')
+<p class="header-text">
+  Already have an account? <a href=" {{ url('/') }}" class="header-link">Log In.</a>
+</p>
+@endsection
+
 @section('content')
 <div class="login-wrapper" data-aos="fade-right" data-aos-duration=1000>
   <h1 class="title">Sign Up</h1>
