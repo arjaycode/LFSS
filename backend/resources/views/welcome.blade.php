@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FindersKeeperz - Login</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  {{-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> --}}
   @vite(['resources/sass/app.scss', 'resources/js/app.js','resources/css/welcome.css'])
 </head>
 <body>
@@ -13,9 +14,12 @@
       <img src="img/Logo.svg" alt="" class="header-logo">
       <span class="logo-title">FINDERSKEEPERZ</span>
     </div>
+    <p class="header-text">
+      Don't have an account? <a href="#" class="header-link">Create new account.</a>
+    </p>
   </header>
   <div class="container">
-    <div class="login-wrapper">
+    <div class="login-wrapper" data-aos="fade-right" data-aos-duration=1000>
       <!-- Logo Section -->
 
 
@@ -55,29 +59,16 @@
     </div>
 
     <!-- Welcome Section -->
-    <div class="welcome-section">
+    <div class="welcome-section" data-aos="fade-left" data-aos-duration=1000>
       <img src="img/Logo.svg" class="welcome-logo" alt="">
       <div class="logo-text">FINDERSKEEPERZ</div>
       <div class="welcome-text">WELCOME.</div>
     </div>
   </div>
-
+  {{-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    function selectRole(role) {
-      const button = document.querySelector('.btn-role');
-      button.innerHTML = `<i class="fas fa-user-tag" style="margin-right: 5px;"></i>${role}<i class="fas fa-chevron-down" style="margin-left: 5px;"></i>`;
+    AOS.init();
 
-      // You can add hidden input to store selected role
-      let roleInput = document.querySelector('input[name="role"]');
-      if (!roleInput) {
-        roleInput = document.createElement('input');
-        roleInput.type = 'hidden';
-        roleInput.name = 'role';
-        document.querySelector('form').appendChild(roleInput);
-      }
-      roleInput.value = role;
-    }
-
-  </script>
+  </script> --}}
 </body>
 </html>
