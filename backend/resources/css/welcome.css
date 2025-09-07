@@ -1,0 +1,250 @@
+@font-face {
+  font-family: 'Jersey';
+  src: url('/public/fonts/Jersey10.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/public/fonts/Inter.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(#0aff88, #0d5331);
+  min-height: 100vh;
+  font-family: 'Jersey', sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+}
+
+.header-logo {
+  position: absolute;
+  top: 0px;
+  width: 70px;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: relative;
+  gap: 100px;
+}
+
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  width: 300px;
+}
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+  position: relative;
+  padding-top: 55px;
+  margin-left: 34px;
+}
+
+.binoculars-icon {
+  font-size: 32px;
+  color: #333;
+  margin-right: 10px;
+}
+
+.logo-title {
+  color: #333;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 15px;
+  width: 350px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.profile-icon i {
+  font-size: 32px;
+  color: white;
+}
+
+.input-label {
+  /* font-family: Inter; */
+  font-size: 18px;
+  font-weight: 100;
+  color: black;
+}
+
+.forgot-password-text {
+  /* font-family: Inter; */
+  font-size: 14px;
+  font-weight: 100;
+  margin: 10px 0 0 0;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+}
+
+.link:hover {
+  transition: 100ms;
+  color: #0aff88;
+}
+
+.role-wrapper {
+  margin-top: 15px;
+  /* font-family: 'Inter'; */
+  font-weight: 100;
+}
+
+.roles {
+  height: 40px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.login-btn {
+  background-color: #0aff88;
+  font-size: 24 px;
+  padding: 8px 25px;
+  border-radius: 20px;
+}
+
+.login-btn:hover {
+  background-color: #9fffd1;
+}
+
+.welcome-section {
+  position: relative;
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  height: 100%;
+}
+
+.welcome-logo {
+  width: 300px;
+  margin-bottom: -80px;
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 50px;
+  letter-spacing: 1px;
+}
+
+.welcome-text {
+  position: absolute;
+  right: -100px;
+  top: -40px;
+  writing-mode: sideways-lr;
+  text-orientation: mixed;
+  font-size: 90px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .welcome-section {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .login-card {
+    padding: 30px 20px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-role,
+  .btn-login {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .form-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-section {
+    margin-bottom: 20px;
+  }
+
+  .binoculars-icon {
+    font-size: 24px;
+  }
+
+  .logo-title {
+    font-size: 16px;
+  }
+
+  .profile-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+
+  .profile-icon i {
+    font-size: 24px;
+  }
+}

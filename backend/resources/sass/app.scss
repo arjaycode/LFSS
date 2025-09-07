@@ -1,0 +1,23 @@
+$theme-colors: (
+  "color-1": #FFFFFF,
+  "color-2": #DDFEE4,
+  "color-3": #28CC9E,
+  "color-4": #196B69,
+  "color-5": #132F2B
+
+);
+
+// Define custom gradients
+$custom-gradients: (
+  "lightgreentodark": linear-gradient(180deg, #0AFF88 , #0D5331 ),
+  "bluegreen": linear-gradient(180deg, #2196f3, #4caf50)
+);
+
+// Loop through and generate utility classes
+@each $name, $gradient in $custom-gradients {
+  .bg-gradient-#{$name} {
+    background: #{$gradient};
+  }
+}
+
+@import   'bootstrap/scss/bootstrap';
