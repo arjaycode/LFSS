@@ -27,6 +27,6 @@ class DatabaseSeeder extends Seeder
 
         User::factory(3)->create();
 
-        $this->call([CategorySeeder::class]);
+        $this->call([CategorySeeder::class, LostItemSeeder::class]);
     }
 }
