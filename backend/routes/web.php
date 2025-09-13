@@ -16,6 +16,11 @@ Route::get('/create/user/account', function () {
     return view('user.create');
 });
 
+
+
+
+
+
 Route::get('/recent', function () {
     $data = items::all();
     return view('item.recent', compact('data'));
