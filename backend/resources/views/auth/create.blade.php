@@ -7,6 +7,15 @@
 @endsection
 
 @section('content')
+@if ($errors->any())
+<div class="alert alert-danger">
+  <ul>
+    @foreach ($errors->all() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+  </ul>
+</div>
+@endif
 <div class="login-wrapper" data-aos="fade-right" data-aos-duration=1000>
   <h1 class="title">Sign Up</h1>
   <div class="login-card">
@@ -19,7 +28,7 @@
     </div>
 
     <!-- Login Form -->
-    <form method="POST" action="#">
+    <form method="POST" action="{{ route('success') }}">
       @csrf
       <div class="container-fluid">
         <div class="row gap-2">
@@ -79,8 +88,8 @@
         <input type="password" class="form-control rounded" id="password" name="password">
       </div>
       <div class="mb-0">
-        <label for="confirm_password" class="form-label input-label mb-0">Confirm Password</label>
-        <input type="password" class="form-control rounded" id="confirm_password" name="confirm_password">
+        <label for="password_confirmation" class="form-label input-label mb-0">Confirm Password</label>
+        <input type="password" class="form-control rounded" id="password_confirmation" name="password_confirmation">
       </div>
       <button type="submit" class="btn login-btn rounded mt-4">Create Account</button>
       <button type="reset" class="btn reset-btn rounded mt-4"><svg width="18px" height="18px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
