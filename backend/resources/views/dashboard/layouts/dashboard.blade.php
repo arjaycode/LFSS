@@ -1,0 +1,190 @@
+@extends('dashboard.main')
+
+
+@section('links')
+<link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/dashboard.css') }}" />
+@endsection
+
+@section('content')
+<header class="page-header">
+  <div class="page-title">
+    <h1>Dashboard</h1>
+    <p>
+      Welcome back! Here's what's happening with your lost and found
+      items.
+    </p>
+  </div>
+</header>
+
+<div class="dashboard-content">
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon lost">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+          <line x1="12" y1="8" x2="12" y2="16" stroke="currentColor" stroke-width="2" />
+          <line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="2" />
+        </svg>
+      </div>
+      <div class="stat-content">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Items Lost</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon found">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <div class="stat-content">
+        <div class="stat-number">1</div>
+        <div class="stat-label">Items Found</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon claimed">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+        </svg>
+      </div>
+      <div class="stat-content">
+        <div class="stat-number">2</div>
+        <div class="stat-label">Items Claimed</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon pending">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+          <polyline points="12,6 12,12 16,14" stroke="currentColor" stroke-width="2" />
+        </svg>
+      </div>
+      <div class="stat-content">
+        <div class="stat-number">1</div>
+        <div class="stat-label">Pending Claims</div>
+      </div>
+    </div>
+  </div>
+  <div class="page-actions">
+    <a href="report-lost.html" class="btn btn-outline">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+        <line x1="12" y1="8" x2="12" y2="16" stroke="currentColor" stroke-width="2" />
+        <line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="2" />
+      </svg>
+      Report Lost
+    </a>
+    <a href="report-found.html" class="btn btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      Report Found
+    </a>
+  </div>
+  Recent Activity
+  <div class="dashboard-section">
+    <div class="section-header">
+      <h2>Recent Activity</h2>
+      <a href="my-reports.html" class="view-all-link">View All</a>
+    </div>
+    <div class="activity-list">
+      <div class="activity-item">
+        <div class="activity-icon lost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+            <line x1="12" y1="8" x2="12" y2="16" stroke="currentColor" stroke-width="2" />
+            <line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="2" />
+          </svg>
+        </div>
+        <div class="activity-content">
+          <div class="activity-title">Reported lost iPhone 13</div>
+          <div class="activity-meta">2 hours ago • Library Building</div>
+        </div>
+        <div class="activity-status status-active">Active</div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-icon found">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="activity-content">
+          <div class="activity-title">Found black wallet</div>
+          <div class="activity-meta">1 day ago • Student Center</div>
+        </div>
+        <div class="activity-status status-claimed">Claimed</div>
+      </div>
+
+      <div class="activity-item">
+        <div class="activity-icon claimed">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+          </svg>
+        </div>
+        <div class="activity-content">
+          <div class="activity-title">Claimed your lost keys</div>
+          <div class="activity-meta">
+            3 days ago • Engineering Building
+          </div>
+        </div>
+        <div class="activity-status status-completed">Completed</div>
+      </div>
+    </div>
+  </div>
+
+  Quick Actions
+  <div class="dashboard-section">
+    <div class="section-header">
+      <h2>Quick Actions</h2>
+    </div>
+    <div class="quick-actions">
+      <a href="report-lost.html" class="action-card">
+        <div class="action-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+            <line x1="12" y1="8" x2="12" y2="16" stroke="currentColor" stroke-width="2" />
+            <line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="2" />
+          </svg>
+        </div>
+        <div class="action-content">
+          <h3>Report Lost Item</h3>
+          <p>Lost something? Report it here to help others find it.</p>
+        </div>
+      </a>
+
+      <a href="report-found.html" class="action-card">
+        <div class="action-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="action-content">
+          <h3>Report Found Item</h3>
+          <p>Found something? Help return it to its owner.</p>
+        </div>
+      </a>
+
+      <a href="browse-items.html" class="action-card">
+        <div class="action-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" />
+            <path d="m21 21-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="action-content">
+          <h3>Browse Items</h3>
+          <p>Search through reported lost and found items.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+@endsection
