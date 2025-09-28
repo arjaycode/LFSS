@@ -27,8 +27,8 @@
       <i class="fas fa-user"></i>
     </div>
 
-    <!-- Login Form -->
-    <form method="POST" action="{{ route('success') }}">
+    <!-- Create Form -->
+    <form method="POST" action="{{ route('register') }}">
       @csrf
       <div class="container-fluid">
         <div class="row gap-2">

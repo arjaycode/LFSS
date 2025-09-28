@@ -7,6 +7,15 @@
 @endsection
 
 @section('content')
+@if ($errors->any())
+<div class="alert alert-danger">
+  <ul>
+    @foreach ($errors->all() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+  </ul>
+</div>
+@endif
 <div class="login-wrapper" data-aos="fade-right" data-aos-duration=1000>
   <h1 class="title">Log In</h1>
   <div class="login-card">
@@ -19,7 +28,7 @@
     </div>
 
     <!-- Login Form -->
-    <form method="POST" action="#" class="w-100">
+    <form method="POST" action="{{ route('login')}}" class="w-100">
       @csrf
 
       <div class="container-fluid">

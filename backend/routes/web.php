@@ -1,20 +1,26 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
 
-Route::get('/', function () {
-    return view('auth.login');
-});
-
-Route::get('/admin', function () {
-    return view('admin.login');
-});
+Route::view('/', 'auth.login');
+Route::view('/admin', 'admin.login');
 
 Route::get('/create/user/account', [UserController::class, 'create']);
-Route::post('/success', [UserController::class, 'store'])->name('success');
+Route::view('/success', 'auth.success')->name('success');
+
+Route::prefix('/user')->group( function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard.dashboard');
+    })->name('user.dashboard');
+});
+
+Route::post('/register', [RegisterController::class, 'register'])->name('register');
+Route::post('/login', [LoginController::class, 'login'])->name('login');
 
 
 
