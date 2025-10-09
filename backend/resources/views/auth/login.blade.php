@@ -43,7 +43,7 @@
           </div>
           <div class="mb-0 p-0">
             <label for="password" class="form-label input-label mb-0">Password</label>
-            <input type="text" class="form-control rounded" id="password" name="password">
+            <input type="password" class="form-control rounded" id="password" name="password">
           </div>
         </div>
 

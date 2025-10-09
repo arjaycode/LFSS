@@ -1,0 +1,239 @@
+@extends('user.main')
+
+
+@section('links')
+<link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/dashboard.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/forms.css')}}" />
+@endsection
+
+@section('content')
+<header class="page-header">
+  <div class="page-title">
+    <h1>Report Lost Item</h1>
+    <p>
+      Help us help you find your lost item by providing detailed
+      information.
+    </p>
+  </div>
+  <div class="page-actions">
+    <a href="report-found.html" class="btn btn-outline">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      Report Found Item
+    </a>
+  </div>
+</header>
+<div class="form-container">
+  <form class="report-form" id="lostItemForm">
+    Item Details Section
+    <div class="form-section">
+      <div class="section-header">
+        <h2>Item Details</h2>
+        <p>Provide as much detail as possible about your lost item</p>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="itemName">Item Name *</label>
+          <input type="text" id="itemName" name="itemName" required placeholder="e.g., iPhone 13, Black Wallet, Keys" />
+        </div>
+        <div class="form-group">
+          <label for="category">Category *</label>
+          <select id="category" name="category" required>
+            <option value="">Select category</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing & Accessories</option>
+            <option value="bags">Bags & Backpacks</option>
+            <option value="jewelry">Jewelry & Watches</option>
+            <option value="keys">Keys & Keychains</option>
+            <option value="books">Books & Stationery</option>
+            <option value="sports">Sports Equipment</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Detailed Description *</label>
+        <textarea id="description" name="description" required rows="4" placeholder="Describe your item in detail - color, brand, model, distinctive features, etc."></textarea>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="color">Primary Color</label>
+          <select id="color" name="color">
+            <option value="">Select color</option>
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="gray">Gray</option>
+            <option value="brown">Brown</option>
+            <option value="blue">Blue</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+            <option value="pink">Pink</option>
+            <option value="purple">Purple</option>
+            <option value="orange">Orange</option>
+            <option value="multicolor">Multicolor</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="brand">Brand/Manufacturer</label>
+          <input type="text" id="brand" name="brand" placeholder="e.g., Apple, Nike, Samsung" />
+        </div>
+      </div>
+    </div>
+
+    Location & Time Section
+    <div class="form-section">
+      <div class="section-header">
+        <h2>When & Where</h2>
+        <p>Help us narrow down the search area</p>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="lostDate">Date Lost *</label>
+          <input type="date" id="lostDate" name="lostDate" required />
+        </div>
+        <div class="form-group">
+          <label for="lostTime">Approximate Time</label>
+          <input type="time" id="lostTime" name="lostTime" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="location">Location Lost *</label>
+        <select id="location" name="location" required>
+          <option value="">Select location</option>
+          <option value="library">Library</option>
+          <option value="student-center">Student Center</option>
+          <option value="cafeteria">Cafeteria</option>
+          <option value="gym">Gymnasium</option>
+          <option value="classroom">Classroom Building</option>
+          <option value="dormitory">Dormitory</option>
+          <option value="parking">Parking Area</option>
+          <option value="outdoor">Outdoor Campus</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="specificLocation">Specific Location Details</label>
+        <input type="text" id="specificLocation" name="specificLocation" placeholder="e.g., 2nd floor study area, Room 201, near the main entrance" />
+      </div>
+    </div>
+
+    Contact Information Section
+    <div class="form-section">
+      <div class="section-header">
+        <h2>Contact Information</h2>
+        <p>How can we reach you when your item is found?</p>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="contactEmail">Email Address *</label>
+          <input type="email" id="contactEmail" name="contactEmail" required placeholder="your.email@example.com" />
+        </div>
+        <div class="form-group">
+          <label for="contactPhone">Phone Number</label>
+          <input type="tel" id="contactPhone" name="contactPhone" placeholder="+1 (555) 123-4567" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="preferredContact">Preferred Contact Method</label>
+        <div class="radio-group">
+          <label class="radio-label">
+            <input type="radio" name="preferredContact" value="email" checked />
+            <!-- <span class="radio-custom"></span> -->
+            Email
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="preferredContact" value="phone" />
+            <!-- <span class="radio-custom"></span> -->
+            Phone
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="preferredContact" value="both" />
+            <!-- <span class="radio-custom"></span> -->
+            Both
+          </label>
+        </div>
+      </div>
+    </div>
+
+    Photo Upload Section
+    <div class="form-section">
+      <div class="section-header">
+        <h2>Photos (Optional)</h2>
+        <p>Upload photos of your item to help with identification</p>
+      </div>
+
+      <div class="form-group">
+        <label for="itemPhotos">Item Photos</label>
+        <div class="file-upload-area" id="fileUploadArea">
+          <input type="file" id="itemPhotos" name="itemPhotos" multiple accept="image/*" hidden />
+          <div class="upload-placeholder">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="currentColor" stroke-width="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" stroke-width="2" />
+              <polyline points="21,15 16,10 5,21" stroke="currentColor" stroke-width="2" />
+            </svg>
+            <p>Click to upload photos or drag and drop</p>
+            <span>PNG, JPG up to 5MB each</span>
+          </div>
+          <div class="uploaded-files" id="uploadedFiles"></div>
+        </div>
+      </div>
+    </div>
+
+    Additional Information Section
+    <div class="form-section">
+      <div class="section-header">
+        <h2>Additional Information</h2>
+        <p>Any other details that might help</p>
+      </div>
+
+      <div class="form-group">
+        <label for="additionalInfo">Additional Notes</label>
+        <textarea id="additionalInfo" name="additionalInfo" rows="3" placeholder="Any other information that might help identify or locate your item..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="checkbox-label">
+          <input type="checkbox" name="publicListing" checked />
+          <span class="checkmark"></span>
+          Make this report visible to other users (recommended)
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label class="checkbox-label">
+          <input type="checkbox" name="emailNotifications" checked />
+          <span class="checkmark"></span>
+          Send me email notifications about potential matches
+        </label>
+      </div>
+    </div>
+
+    Form Actions
+    <div class="form-actions">
+      <button type="button" class="btn btn-outline" onclick="history.back()">
+        Cancel
+      </button>
+      <button type="submit" class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <polyline points="17,21 17,13 7,13 7,21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <polyline points="7,3 7,8 15,8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        Submit Report
+      </button>
+    </div>
+  </form>
+</div>
+@endsection

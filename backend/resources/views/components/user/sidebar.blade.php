@@ -10,7 +10,7 @@
 </div>
 
 <nav class="sidebar-nav">
-  <a href="dashboard.html" class="nav-item active">
+  <a href="{{ route('user.dashboard') }}" class="nav-item {{ request()->routeIs('user.dashboard') ? 'active' : '' }}">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="3" y="3" width="7" height="7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       <rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -20,7 +20,7 @@
     <span>Dashboard</span>
   </a>
 
-  <a href="notifications.html" class="nav-item">
+  <a href="{{ route('user.notifications') }}" class="nav-item {{ request()->routeIs('user.notifications') ? 'active' : '' }}">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -28,7 +28,7 @@
     <span>Notifications</span>
   </a>
 
-  <a href="my-reports.html" class="nav-item">
+  <a href="{{route('user.my_reports')}}" class="nav-item {{ request()->routeIs('user.my_reports') ? 'active' : '' }}">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -36,7 +36,7 @@
     <span>My Reports</span>
   </a>
 
-  <a href="report-lost.html" class="nav-item">
+  <a href="{{ route('user.report_lost')}}" class="nav-item {{ request()->routeIs('user.report_lost') ? 'active' : '' }}">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />

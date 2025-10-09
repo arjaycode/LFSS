@@ -1,4 +1,4 @@
-@extends('dashboard.main')
+@extends('user.main')
 
 
 @section('links')
